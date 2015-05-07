@@ -1,0 +1,8 @@
+Utilities for doing things with database systems, particularly MySQL
+
+* History
+
+- 2014-10-28: Deployed in teaching.
+- 2014-10-31: Left justify string types.
+- 2015-05-07: Generalized and reorganized, moved from javautil into
+  its own project
