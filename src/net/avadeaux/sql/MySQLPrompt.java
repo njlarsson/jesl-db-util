@@ -26,7 +26,13 @@ public class MySQLPrompt {
     public static void main(String[] args) {
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-        } catch (ReflectiveOperationException ex) {
+        } catch (ClassNotFoundException ex) {
+            System.err.println("Can't load JDBC driver, " + ex);
+            System.exit(1);
+        } catch (InstantiationException ex) {
+            System.err.println("Can't load JDBC driver, " + ex);
+            System.exit(1);
+        } catch (IllegalAccessException ex) {
             System.err.println("Can't load JDBC driver, " + ex);
             System.exit(1);
         }
